@@ -35,7 +35,7 @@ set splitbelow splitright
 "												terminal font size should be 8
 "												for screen resolution of
 "												1080p)
-let @c = ':Lex60<lv:termkc25<hh'
+let @e = ':Lex60<lv:termkc25<hh'
 
 
 "go-lang commands   - leader key is backslash key
