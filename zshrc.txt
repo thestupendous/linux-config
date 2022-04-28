@@ -1,0 +1,30 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.ZSH_HISTORY
+HISTSIZE=1000
+SAVEHIST=1000
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/anand/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+#			configuration settings by anand
+
+# alias by anand
+alias ls="ls --color"
+
+
+# for enabling ctrl+r
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+PS1="%K{purple}%?%k %F{red}%n@%m%f %F{green}%~%f %F{yellow}${vcs_info_msg_0_}%f >"

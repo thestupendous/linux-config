@@ -20,22 +20,30 @@ set splitbelow splitright
 "set colorcolumn=80
 
 "remap split navigation
-"nnoremap <C-h> <c-w>h
-"nnoremap <C-j> <c-w>j
-"nnoremap <C-k> <c-w>k
-"nnoremap <C-l> <c-w>l
+nnoremap <C-h> <c-w>h
+nnoremap <C-j> <c-w>j
+nnoremap <C-k> <c-w>k
+nnoremap <C-l> <c-w>l
+
+" Use ctrl-[hjkl] to select the active split!
+"nmap <silent> <c-k> :wincmd k<CR>
+"nmap <silent> <c-j> :wincmd j<CR>
+"nmap <silent> <c-h> :wincmd h<CR>
+"nmap <silent> <c-l> :wincmd l<CR>
 
 "remap for resize commands
-"noremap <silent> <C-Left> :vertical resize -3<CR>
-"noremap <silent> <C-Right> :vertical resize +3<CR>
-"noremap <silent> <C-Up> :resize +3<CR>
-"noremap <silent> <C-Down> :resize -3<CR>
+noremap <silent> <C-Left> :vertical resize -3<CR>
+noremap <silent> <C-Right> :vertical resize +3<CR>
+noremap <silent> <C-Up> :resize +3<CR>
+noremap <silent> <C-Down> :resize -3<CR>
+
 
 "for IDE mode, for programming					- (for best experience,
 "												terminal font size should be 8
 "												for screen resolution of
 "												1080p)
-let @e = ':Lex60<lv:termkc25<hh'
+let @e = ':Lex60<lv:termkc25<hhhhhh:vert res 30'
+"let @x = 'lllll€ý5€ý5:q€kb€kb'
 
 
 "go-lang commands   - leader key is backslash key
