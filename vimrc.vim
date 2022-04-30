@@ -1,4 +1,4 @@
-"this config file has been modified suitably for added golng support
+" this config file has been modified suitably for added golng support
 "  it has code completion and autoformatting for golang
 "  through the use of plugins
 syntax on
@@ -20,16 +20,16 @@ set splitbelow splitright
 "set colorcolumn=80
 
 "remap split navigation
-nnoremap <C-h> <c-w>h
-nnoremap <C-j> <c-w>j
-nnoremap <C-k> <c-w>k
-nnoremap <C-l> <c-w>l
+"nnoremap <C-h> <c-w>h
+"nnoremap <C-j> <c-w>j
+"nnoremap <C-k> <c-w>k
+"nnoremap <C-l> <c-w>l
 
 " Use ctrl-[hjkl] to select the active split!
-"nmap <silent> <c-k> :wincmd k<CR>
-"nmap <silent> <c-j> :wincmd j<CR>
-"nmap <silent> <c-h> :wincmd h<CR>
-"nmap <silent> <c-l> :wincmd l<CR>
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 "remap for resize commands
 noremap <silent> <C-Left> :vertical resize -3<CR>
@@ -70,6 +70,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Chiel92/vim-autoformat'
 "Plug 'valloric/youcompleteme'
 call plug#end()
+
+"auto formatter settings
+let g:formatterpath = ['/usr/local/bin/autopep8']    "first one is for python - install by- pip install autopep8
 
 
 "  below line will give error unless I manually download and save colorscheme file
