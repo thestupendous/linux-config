@@ -1,4 +1,4 @@
-" this config file has been modified suitably for added golng support
+"this config file has been modified suitably for added golng support
 "  it has code completion and autoformatting for golang
 "  through the use of plugins
 syntax on
@@ -20,16 +20,10 @@ set splitbelow splitright
 "set colorcolumn=80
 
 "remap split navigation
-"nnoremap <C-h> <c-w>h
-"nnoremap <C-j> <c-w>j
-"nnoremap <C-k> <c-w>k
-"nnoremap <C-l> <c-w>l
-
-" Use ctrl-[hjkl] to select the active split!
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
+nnoremap <C-h> <c-w>h
+nnoremap <C-j> <c-w>j
+nnoremap <C-k> <c-w>k
+nnoremap <C-l> <c-w>l
 
 "remap for resize commands
 noremap <silent> <C-Left> :vertical resize -3<CR>
@@ -37,13 +31,16 @@ noremap <silent> <C-Right> :vertical resize +3<CR>
 noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
-
 "for IDE mode, for programming					- (for best experience,
 "												terminal font size should be 8
 "												for screen resolution of
 "												1080p)
-let @e = ':Lex60<lv:termkc25<hhhhhh:vert res 30'
-"let @x = 'lllll€ý5€ý5:q€kb€kb'
+let @e = ':Lex60<lv:termkc25<hh'
+" golang commenting and decommenting macros 
+" c to comment and u for uncomment (below 2 lines)->
+let @c = '0wi// j'
+let @u = '0w3xj'
+
 
 
 "go-lang commands   - leader key is backslash key
@@ -70,9 +67,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Chiel92/vim-autoformat'
 "Plug 'valloric/youcompleteme'
 call plug#end()
-
-"auto formatter settings
-let g:formatterpath = ['/usr/local/bin/autopep8']    "first one is for python - install by- pip install autopep8
 
 
 "  below line will give error unless I manually download and save colorscheme file
