@@ -1,0 +1,4 @@
+after installing kde gdm on ubuntu, things to consider ->
+ - maximizing windows is win+pageup
+ - konsole (default terminal) gives ugly horizontal lines, to correct ->
+	- on terminal (konsole),  Right Click > Edit Current Profile... > Appearance > Miscellaneous > Line spacing -> set to '1 pixel' 
